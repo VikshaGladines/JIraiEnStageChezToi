@@ -15,7 +15,7 @@ class OfferRegionController extends Controller
      */
     public function index($region)
     {
-        $region = Offer::where('region', $region);
+        $region = Offer::where('region', $region)->get();
         
         return view('offerRegion', [
             'offerRegion' => $region

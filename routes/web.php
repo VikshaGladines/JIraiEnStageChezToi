@@ -19,6 +19,8 @@ use App\Http\Controllers\OfferRegionController;
 */
 $region = array("Occitanie","Bretagne");
 
+$test = 1;
+
 Route::get('/home', [MainController::class, 'home'])->name('home');
 
 Route::get('admin/offres', [MainController::class, 'offers'])->middleware('admin')->name('offer.show');
@@ -29,7 +31,7 @@ Route::post('/offer/store', [MainController::class, 'store'])->middleware('admin
 
 Route::get('/admin/offre', [OfferAdminController::class, 'index'])->middleware('admin')->name('admin.test');
 
-Route::get('/test/{region}', [OfferRegionController::class, 'index'])->name('offre.region')->where('region', $region[1]);
+Route::get('/test/{region}', [OfferRegionController::class, 'index'])->name('offre.region')->where('region', $region[$test]);
 
 Route::get('/dashboard', function () {
     return view('dashboard');

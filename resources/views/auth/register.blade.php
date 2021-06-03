@@ -21,9 +21,58 @@
 
             <!-- Email Address -->
             <div class="mt-4">
-                <x-label for="email" :value="__('Email')" />
+                <x-label for="email" :value="__('Email (étudiant)')" />
 
                 <x-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required />
+            </div>
+
+            <div class="mt-4">
+                <x-label for="niveau d'étude" :value="__('niveau')" />
+
+                <SELECT id="level" class="block mt-1 w-full" type="text" name="level" required> 
+                    <OPTION> level 1
+                        <OPTION> level 2
+                            <OPTION> level 3 
+                     </SELECT>
+            </div>
+            <div class="mt-4">
+                <x-label for="ville" :value="__('city')" />
+
+                <SELECT id="city" class="block mt-1 w-full" type="text" name="city" required> 
+                    <OPTION> AMIENS
+                    <OPTION> ANGERS
+                    <OPTION> BESANCON
+                    <OPTION> BORDEAUX 
+                    <OPTION> BOURG EN BRESSE
+                    <OPTION> BREST
+                    <OPTION> CAEN
+                    <OPTION> CLERMONT FERRAND
+                    <OPTION> DIJON
+                    <OPTION> GRENOBLE 
+                    <OPTION> LILLE FMM
+                    <OPTION> LILLE CHR
+                    <OPTION> LIMOGES
+                    <OPTION> LYON
+                    <OPTION> MARSEILLE
+                    <OPTION> METZ
+                    <OPTION> MONTPELLIER
+                    <OPTION> NANCY
+                    <OPTION> NANTES
+                    <OPTION> NICE
+                    <OPTION> NÎMES
+                    <OPTION> PARIS Baudelocque
+                    <OPTION> PARIS Foch
+                    <OPTION> PARIS Poissy
+                    <OPTION> PARIS Saint-Antoine
+                    <OPTION> POITIERS
+                    <OPTION> REIMS
+                    <OPTION> RENNES
+                    <OPTION> ROUEN
+                    <OPTION> STRASBOURG
+                    <OPTION> TOULOUSE
+                    <OPTION> TOURS
+                    <OPTION> LA REUNION
+                    </SELECT>
             </div>
 
             <!-- Password -->
@@ -43,6 +92,16 @@
                 <x-input id="password_confirmation" class="block mt-1 w-full"
                                 type="password"
                                 name="password_confirmation" required />
+            </div>
+            <br>
+            <div> 
+                <label for="coche" :value="__('Jacceptelachartedelanesf')">
+
+                <input id="coche" class=""
+                                type="checkbox"
+                                name="coche"
+                                required> j'accepte la charte de l'anesf
+               
             </div>
 
             <div class="flex items-center justify-end mt-4">

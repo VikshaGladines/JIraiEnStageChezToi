@@ -3,12 +3,17 @@
 @section('content')
 <div>
     @foreach ($offerRegion as $offer)
-        <p> {{ $offer->title }} {{ $offer->email }} {{ $offer->ville }} {{ $offer->content }}</p>
+        <p> <a href=" {{ route('offer', $offer->slug) }}"> {{ $offer->title }} </a></p> <p>{{ $offer->email }} {{ $offer->ville }} {{ $offer->content }}</p>
 
                  
     @endforeach
 
+    @foreach ($demandRegion as $demand)
+        <p> {{ $demand->title }} </a></p> <p>{{ $demand->email }} {{ $demand->ville }} {{ $demand->content }}</p>
 
-    <p> TESTTTTTTTTTTTTTTTTTTTT </p>
+                 
+    @endforeach
+   
+
 </div>
 @endsection

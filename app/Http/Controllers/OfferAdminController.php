@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Offer;
 use Illuminate\Http\Request;
+use App\Http\Requests\OfferRequest;
 
 class OfferAdminController extends Controller
 {
@@ -66,10 +68,8 @@ class OfferAdminController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
-    {
-        //
-    }
+    public function update(OfferRequest $request, Offer $offer)
+    
 
     /**
      * Remove the specified resource from storage.
@@ -77,7 +77,7 @@ class OfferAdminController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function delete($id)
     {
         //
     }

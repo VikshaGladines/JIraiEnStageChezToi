@@ -15,8 +15,13 @@ return [
     |            "sparkpost", "log", "array"
     |
     */
+    'domain' => env('MAILGUN_DOMAIN'),
+
+    'secret' => env('MAILGUN_SECRET'),
 
     'driver' => env('MAIL_DRIVER', 'smtp'),
+
+    'endpoint' => env('MAILGUN_ENDPOINT'),
 
     /*
     |--------------------------------------------------------------------------
@@ -28,7 +33,7 @@ return [
     | the Mailgun mail service which will provide reliable deliveries.
     |
     */
-
+    
     'host' => env('MAIL_HOST', 'smtp.mailgun.org'),
 
     /*

@@ -14,14 +14,17 @@ class CreateOffersTable extends Migration
     public function up()
     {
         Schema::create('offers', function (Blueprint $table) {
-            $table->increments('id_offers');
+            $table->increments('id');
             $table->string('email')->unique();
             $table->string('title');
             $table->string('content');
             $table->string('region');
             $table->string('ville');
+            $table->integer('user_id')->unsigned();
             $table->string('slug')->nullable();
             $table->timestamps();
+
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
         });
     }
 

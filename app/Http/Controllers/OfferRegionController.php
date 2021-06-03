@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Offer;
 use App\Models\Region;
+use App\Models\demande;
 use Illuminate\Http\Request;
 
 class OfferRegionController extends Controller
@@ -14,13 +15,14 @@ class OfferRegionController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index($region)
-    {
+    {   
+        $regions = demande::where('region', $region)->get();
         $region = Offer::where('region', $region)->get();
-        
         return view('offerRegion', [
-            'offerRegion' => $region
+            'offerRegion' => $region,
+            'demandRegion' => $regions,
+            
         ]);
-    
     }
 
     /**

@@ -15,6 +15,13 @@ class Offer extends Model
         'email',
         'content',
         'region',
-        'ville'
+        'ville',
+        'user_id',
+        'slug'
     ];
+
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
 }

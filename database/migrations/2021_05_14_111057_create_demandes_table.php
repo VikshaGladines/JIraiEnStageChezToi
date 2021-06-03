@@ -19,8 +19,11 @@ class CreateDemandesTable extends Migration
             $table->string('title');
             $table->string('content');
             $table->string('region');
-            $table->string('slug')->nullable();
+            $table->string('ville');
+            $table->integer('user_id')->unsigned();
             $table->timestamps();
+
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
         });
     }
 

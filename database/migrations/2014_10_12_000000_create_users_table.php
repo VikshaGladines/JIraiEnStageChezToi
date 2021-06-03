@@ -18,9 +18,18 @@ class CreateUsersTable extends Migration
             $table->string('name');
             $table->string('email')->unique();
             $table->string('password');
-            $table->string('role');
+            $table->integer('offer_id')->unsigned()->nullable();
+            $table->integer('demande_id')->unsigned()->nullable();
+            $table->string('role')->default('USER');
+            $table->string('avatar')->default('default.jpg');
+            $table->string('city')->nullable();
+            $table->string('level');
             $table->rememberToken();
             $table->timestamps();
+
+            $table->foreign('offer_id')->references('id')->on('offers')->onDelete('cascade');
+
+            $table->foreign('demande_id')->references('id')->on('demandes')->onDelete('cascade');
         });
     }
 

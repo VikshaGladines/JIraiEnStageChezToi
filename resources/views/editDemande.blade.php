@@ -15,28 +15,28 @@
         
             <div class="card stylecard">  
                 <div class="card-body">
-                <form method="POST" action="{{ route('demande.update', $demandes->id) }}">
+                <form method="POST" action="{{ route('demande.update', $demande->id) }}">
                     <div class="form-group">
                         @method("PUT")
                     @csrf
-                    <input type="hidden" class="d-flex justify-content-center form-control" name="user_id" value="{{ $demandes->user_id }}">
+                    <input type="hidden" class="d-flex justify-content-center form-control" name="user_id" value="{{ $demande->user_id }}">
                    
                     <label class="d-flex justify-content-center lead"  for="email"> Modifier votre email </label>
 
                     <div class="d-flex justify-content-center p-1">
-                    <input type="email" name="email" size="30" value="{{ $demandes->email }}" id=email required ><br>
+                    <input type="email" name="email" size="30" value="{{ $demande->email }}" id=email required ><br>
                     </div>
 
                     <label class="d-flex justify-content-center lead" for="title"> Modifier le titre de la demande </label>
 
                     <div class="d-flex justify-content-center p-1">
-                    <input class="d-flex justify-content-center" type="text" value="{{ $demandes->title }}" name="title" size="30" id=title required><br><br>
+                    <input class="d-flex justify-content-center" type="text" value="{{ $demande->title }}" name="title" size="30" id=title required><br><br>
                     </div>
 
                     <label class="d-flex justify-content-center lead" for="desc"> Modifier la description de la demande </label>
 
                     <div class="d-flex justify-content-center p-1">
-                    <textarea class="d-flex justify-content-center" id="Tiny-text" name="content" id=desc  rows="6" cols="50" required>{{ $demandes->content }}</textarea><br>
+                    <textarea class="d-flex justify-content-center" id="Tiny-text" name="content" id=desc  rows="6" cols="50" required>{{ $demande->content }}</textarea><br>
                     </div>
                     @if($errors->any())
                     <div class="text-danger d-flex justify-content-center lead">{{ implode('', $errors->all('Description trop long')) }}</div>
@@ -44,7 +44,7 @@
                     
                     <label class="d-flex justify-content-center lead" for="select"> Modifier la région de la demande </label>
                     <div class="d-flex justify-content-center p-1">
-                    <SELECT class="d-flex justify-content-center m-1" value="{{ $demandes->region }}" name="region" id=select size="1" required><br>
+                    <SELECT class="d-flex justify-content-center m-1" value="{{ $demande->region }}" name="region" id=select size="1" required><br>
                         <OPTION>Auvergne-Rhone-Alpes
                         <OPTION>Bourgogne-Franche-Comté
                         <OPTION>Bretagne
@@ -67,7 +67,7 @@
                 </div>
                     <label class="d-flex justify-content-center lead" for="ville">Modifier la ville de la demande </label>
                     <div class="d-flex justify-content-center p-1">
-                    <input class="d-flex justify-content-center" type="text" value="{{ $demandes->ville }}" id=ville name="ville" size="30" required><br>
+                    <input class="d-flex justify-content-center" type="text" value="{{ $demande->ville }}" id=ville name="ville" size="30" required><br>
                     </div>
                     <div class="d-flex justify-content-center p-1">
                     <button class="d-flex justify-content-center btn btn-primary mt-3" type="submit"> Modifier</button><br>

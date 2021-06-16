@@ -32,9 +32,10 @@ class MainController extends Controller
     public function offers() 
     {   
         $offers = Offer::all();
-        
+        $demandes = demande::all();
         return view('IndexOffer', [
-            'IndexOffer' => $offers
+            'IndexOffer' => $offers,
+            'demande' => $demandes
         ]);
     }
     
@@ -151,6 +152,7 @@ class MainController extends Controller
     }
     public function update(OfferRequest $request, Offer $offer)
     {
+        dd($offer);
         $validator = $request->validate([
             'title' => 'required|max:200',
             'email' => 'required|max:70',

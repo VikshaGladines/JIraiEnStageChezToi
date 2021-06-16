@@ -177,7 +177,9 @@
   }
   .animationtest {opacity:0;animation: transition 1s ease-in-out 1s forwards;}
   
-
+.footers {
+    
+}
 
  /* fin class de test */
 :root {

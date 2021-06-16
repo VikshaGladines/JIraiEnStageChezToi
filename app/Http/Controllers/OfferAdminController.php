@@ -69,7 +69,7 @@ class OfferAdminController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function update(OfferRequest $request, Offer $offer)
-    
+    {}
 
     /**
      * Remove the specified resource from storage.
@@ -79,6 +79,6 @@ class OfferAdminController extends Controller
      */
     public function delete($id)
     {
-        //
+        
     }
 }

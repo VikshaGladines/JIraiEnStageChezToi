@@ -1,4 +1,4 @@
-<div class="row" style="background-color: black">
+<div class="row footers" style="background-color: black;">
     <div class="col-12">
         <div class="d-flex justify-content-center">
            
@@ -31,6 +31,9 @@
                 viewBox="0 0 172 172"
                 style=" fill:#000000;"><defs><linearGradient x1="37.05525" y1="29.78467" x2="146.19283" y2="138.92225" gradientUnits="userSpaceOnUse" id="color-1_5MQ0gPAYYx7a_gr1"><stop offset="0" stop-color="#2aa4f4"></stop><stop offset="1" stop-color="#007ad9"></stop></linearGradient></defs><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="none"></path><g fill="url(#color-1_5MQ0gPAYYx7a_gr1)"><path d="M165.20958,39.48833c-5.55775,2.46175 -11.53475,4.10292 -17.84142,4.8805c6.41058,-3.8055 11.34483,-9.87567 13.65967,-17.0495c-5.9985,3.51525 -12.64558,6.09883 -19.7155,7.4605c-5.64733,-5.98417 -13.70267,-9.6965 -22.62517,-9.6965c-17.13908,0 -31.03525,13.77075 -31.03525,30.75217c0,2.40442 0.28308,4.74433 0.80983,7.01617c-25.78567,-1.29358 -48.65808,-13.55217 -63.95892,-32.15683c-2.6875,4.54725 -4.19967,9.8685 -4.19967,15.48717c0,10.67475 5.46458,20.07383 13.79942,25.61008c-5.08833,-0.15408 -9.87567,-1.5695 -14.06817,-3.84133c0,0.09317 0,0.22933 0,0.36192c0,14.91742 10.69983,27.34083 24.88267,30.16808c-2.59075,0.7095 -5.332,1.10367 -8.15567,1.10367c-2.00308,0 -3.956,-0.22575 -5.848,-0.56617c3.94883,12.1905 15.40475,21.10225 28.97842,21.36742c-10.621,8.2345 -23.99758,13.16517 -38.54233,13.16517c-2.51192,0 -4.97008,-0.14333 -7.39958,-0.43717c13.74925,8.70392 30.06417,13.803 47.5795,13.803c57.07175,0 88.29692,-46.86642 88.29692,-87.5265c0,-1.333 -0.043,-2.65883 -0.10392,-3.97033c6.09167,-4.30358 11.34125,-9.72875 15.48717,-15.9315"></path></g></g></svg>
                 <span style="padding-top: 10px;" class="text-white"> : https://twitter.com/Anesf_FR </a> </span>
+            </div>
+            <div class="d-flex justify-content-center">
+                <p class="text-dark"> ©2021 Tous droits déposé ANESF</p>
             </div>
     </div>
 </div>

@@ -81,7 +81,7 @@ Route::delete('/demande/{demande:id}/delete', [DemandController::class, 'delete'
 
 Route::get('/demande/{demande:id}/edit', [DemandController::class, 'edit'])->middleware('auth')->name('demande.edit');
 
-Route::put('/demande/{demande:id}/update', [MainController::class, 'update'])->middleware('auth')->name('demande.update');
+Route::put('/demande/{demande:id}/update', [DemandController::class, 'update'])->middleware('auth')->name('demande.update');
 
 //offer
 Route::post('/offer/store', [MainController::class, 'store'])->middleware('auth')->name('offer.store');

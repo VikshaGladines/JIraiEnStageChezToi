@@ -65,7 +65,7 @@ class DemandController extends Controller
     public function edit(demande $demande) {
         if (Auth::user()->id == $demande->user_id || Auth::user()->role == 'ADMIN') {
         return view('editDemande',[
-            'demandes' => $demande
+            'demande' => $demande
         ]);
         } 
         else {
@@ -73,8 +73,9 @@ class DemandController extends Controller
         }
     }
 
-    public function update(DemandRequest $request, demande $demandes)
-    {
+    public function update(DemandRequest $request, demande $demande)
+    { 
+        
         $validator = $request->validate([
             'title' => 'required|max:200',
             'email' => 'required|max:70',
@@ -86,13 +87,14 @@ class DemandController extends Controller
         if($validator == false) {
             return Redirect::back()->withErrors($validator);
         }
-        $demandes->email = $request->input('email');
-        $demandes->title = $request->input('title');
-        $demandes->content = $request->input('content');
-        $demandes->region = $request->input('region');
-        $demandes->ville = $request->input('ville');
-        $demandes->user_id = $request->input('user_id');
-        $demandes->save();
+        
+        $demande->email = $request->input('email');
+        $demande->title = $request->input('title');
+        $demande->content = $request->input('content');
+        $demande->region = $request->input('region');
+        $demande->ville = $request->input('ville');
+        $demande->user_id = $request->input('user_id');
+        $demande->save();
         if (Auth::user()->role == 'ADMIN') {
         return redirect()->route('offer.show');
         } else {

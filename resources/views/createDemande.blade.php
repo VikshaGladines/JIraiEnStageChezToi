@@ -1,40 +1,84 @@
 @extends('base')
 
 @section('content')
-<form method="POST" action="{{ route ('demand.store') }}">
-<div>
-    @csrf
-    <h1> Faite Une Demande </h1> <br>
-    <input type="hidden" name="user_id" value="{{ $createdemande }}">
-    <p>mail</p> <input type="email" name="email" size="30" required>
+<div class="container-fluid">
+    <div class="row "> 
+        <div class="col-12">
+        <h1 class="d-flex justify-content-center p-3 border-bottom"> Faite une demande </h1> <br>
+        </div>
+    </div>
 
-    <p>title</p> <input type="text" name="title" size="30" required>
-    
-    <p>description :</p> <textarea id="Tiny-text" name="content" rows="10" cols="70" required></textarea>
+    <div class="row mb-3">
+        <div class="col-3">
+        </div>
+    <div class="col-6 d-flex justify-content-center">
+        <div class="card stylecard">  
+            <div class="card-body">
+                <form method="POST" action="{{ route ('demand.store') }}">
+                    <div class="form-group pt-4 pb-4">
+                        @csrf
+                        <input type="hidden" class="d-flex justify-content-center form-control" name="user_id" value="{{ $createdemande }}">
 
-    <p>region</p> <SELECT name="region" size="1" required>
-        <OPTION>Auvergne-Rhone-Alpes
-        <OPTION>Bourgogne-Franche-Comté
-        <OPTION>Bretagne
-        <OPTION>Centre-Val de Loire
-        <OPTION>Corse
-        <OPTION>Grand Est
-        <OPTION>Hauts-de-France
-        <OPTION>Ile-de-France
-        <OPTION>Normandie
-        <OPTION>Nouvelle-Aquitaine
-        <OPTION>Occitanie
-        <OPTION>Pays de la Loire
-        <OPTION>Provence-Alpes-Côte d’Azur
-        <OPTION>Guyane
-        <OPTION>Reunion
-        <OPTION>Martinique
-        <OPTION>Guadeloupe
-        <OPTION>Mayotte
-    </SELECT>
-    <p>ville</p> <input type="text" name="ville" size="30" required>
-    <p><input type="submit"></p>
+                        <label class="d-flex justify-content-center lead" for="email"> Veuillez saisir votre email </label>
+                        <div class="d-flex justify-content-center p-1">
+
+                        <input type="email" id="email "name="email" size="30" required>
+                        </div>
+
+                        <label class="d-flex justify-content-center lead" for="title"> Veuillez saisir le titre de votre demande </label>
+
+                        <div class="d-flex justify-content-center p-1">
+                        <input type="text" id="title "name="title" size="30" required>
+                        </div>
+
+                        <label class="d-flex justify-content-center lead" for="desc"> Veuillez saisir la description de la demande </label>
+
+                        <div class="d-flex justify-content-center p-1">
+                        <textarea id="Tiny-text" id="desc"name="content" rows="5" cols="50" required></textarea>
+                        </div>
+                        @if($errors->any())
+                        <div class="text-danger d-flex justify-content-center lead">{{ implode('', $errors->all('Description trop long')) }}</div>
+                        @endif
+                        <label class="d-flex justify-content-center lead" for="select"> Veuillez choisir la région de la demande </label>
+
+                        <div class="d-flex justify-content-center p-1">
+                        <SELECT class="d-flex justify-content-center m-1" name="region" id="select"size="1" required>
+                            <OPTION>Auvergne-Rhone-Alpes
+                            <OPTION>Bourgogne-Franche-Comté
+                            <OPTION>Bretagne
+                            <OPTION>Centre-Val de Loire
+                            <OPTION>Corse
+                            <OPTION>Grand Est
+                            <OPTION>Hauts-de-France
+                            <OPTION>Ile-de-France
+                            <OPTION>Normandie
+                            <OPTION>Nouvelle-Aquitaine
+                            <OPTION>Occitanie
+                            <OPTION>Pays de la Loire
+                            <OPTION>Provence-Alpes-Côte d’Azur
+                            <OPTION>Guyane
+                            <OPTION>Reunion
+                            <OPTION>Martinique
+                            <OPTION>Guadeloupe
+                            <OPTION>Mayotte
+                        </SELECT>
+                        </div>
+
+                        <label class="d-flex justify-content-center lead" for="ville"> Veuillez saisir la ville de la demande </label>
+
+                        <div class="d-flex justify-content-center p-1">
+                        <input type="text" id="ville" name="ville" size="30" required>
+                        </div>
+                        <div class="d-flex justify-content-center p-1">
+                        <button class="d-flex justify-content-center btn btn-primary mt-3" type="submit">Soumettre la demande </button>
+                        </div>
+                    </div>
+                    </form>
+            </div>
+        </div>
+    </div>
+    <div class="col-3">
+    </div>
+    </div>
 </div>
-</form>
-
 @endsection

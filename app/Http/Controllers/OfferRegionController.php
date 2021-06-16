@@ -18,11 +18,23 @@ class OfferRegionController extends Controller
     {   
         $regions = demande::where('region', $region)->get();
         $region = Offer::where('region', $region)->get();
+        $null = false;
+        if ($region->isEmpty()) {
+            return view('offerRegion', [
+                'rien' => $null,
+                'offerRegion' => $region,
+                'demandRegion' => $regions
+            ]);
+        }
+        else {
+            $null = true;
         return view('offerRegion', [
-            'offerRegion' => $region,
-            'demandRegion' => $regions,
-            
-        ]);
+                'offerRegion' => $region,
+                'demandRegion' => $regions,
+                'rien' => $null
+                
+            ]);
+        }
     }
 
     /**

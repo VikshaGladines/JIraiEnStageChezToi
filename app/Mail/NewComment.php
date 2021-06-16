@@ -6,6 +6,8 @@ use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
+use Mailjet\LaravelMailjet\Facades\Mailjet;
+use Mailjet\LaravelMailjet\Contracts\CampaignDraftContract;
 
 class NewComment extends Mailable
 {

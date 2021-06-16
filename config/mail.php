@@ -41,9 +41,6 @@ return [
             'encryption' => env('MAIL_ENCRYPTION', 'tls'),
             'username' => env('MAIL_USERNAME'),
             'password' => env('MAIL_PASSWORD'),
-            'domain' => env('MAILGUN_DOMAIN'),
-            'secret' => env('MAILGUN_SECRET'),
-            'endpoint' => env('MAILGUN_ENDPOINT'),
             'timeout' => null,
             'auth_mode' => null,
         ],
@@ -75,7 +72,6 @@ return [
         ],
     ],
 
-   
     /*
     |--------------------------------------------------------------------------
     | Global "From" Address

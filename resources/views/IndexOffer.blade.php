@@ -1,31 +1,54 @@
 @extends('base')
 
 @section('content')
-<div>
-  <h1 style="text-align: center"> Espace Administrateur </h1>
-    @foreach ($IndexOffer as $offer)
-        <h1> <a href=" {{ route('offer', $offer->slug) }}"> {{ $offer->title }} </a> </h1>  
-        <p>{{ $offer->email }} | {{ $offer->content }} | {{ $offer->ville }}</p>
-        <a href="{{ route('offer.edit', $offer->id) }}"> edit </a>
-        <button type="button" class="btn btn_danger" onclick="document.getElementById('myModal-{{ $offer->id }}').style.display='block'"> delete </button>
-        <form action={{ route('offer.delete', $offer->id) }} method="POST">
-            @csrf
-            @method("DELETE")
-            <div id="myModal-{{ $offer->id }}" class="modal">
-
-                <!-- Modal content -->
-                <div class="modal-content">
-                  <span class="close">&times;</span>
-                  <p>Êtes-vous sur de vouloir supprimer cet article ?</p>
-                </div>
-              
-              
-              <button type="submit"> yep je suis sur </button>
-            </div>
-        </form>
-
-                 
-    @endforeach
+<div class="container-fluid">
+  <div class="row mb-3">
+    <div class="col-3">
+    </div>
+    <div class="col-6">
+        <h2 class="p-3"style="text-align: center"> Espace Admin  </h2>
+       
+            @foreach ($IndexOffer as $offer)
+            <div class="card mb-5">
+            <div class="card-body">
+              <h3 class="card-title border-bottom pb-2"> <a href=" {{ route('offer', $offer->slug) }}"> {{ $offer->title }} </a> </h3> 
+              <span class="d-flex justify-content-end p-2" style="position: relative; right: 50px; bottom: 68px;"> <button class="btn btn-danger pb-2 pt-2 pr-3 pl-3"> <a class=" text-white" href="{{ route('offer.edit', $offer->id) }}"> Editer </a> </button></span> 
+              <button type="button" style="position: relative; left: 870px; bottom: 117px;" class="btn btn-primary p-2" onclick="document.getElementById('model-open').style.display='block'"> Supprimer </button>
+              <div class=""style="position: relative; bottom: 85px;">
+              <p class="d-flex justify-content-start"> {{ $offer->content }}</p>
+              </div>
+              <p class="d-flex justify-content-end">{{ $offer->created_at->format('d/m/Y') }} </p> 
+              <form action={{ route('offer.delete', $offer->id) }} method="POST">
+                  @csrf
+                  @method("DELETE")
+                  <div id="model-open" class="modal">
+                    
+                      <div class="row" style="position: relative; top: 400px;">
+                        <div class="col-2">
+                        </div>
+                        <div class="col-8">
+                        <div class="modal-content">
+                          <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                          <span style="" class="close p-2" onclick="document.getElementById('model-open').style.display='none'">&times;</span>
+                          </button>
+                          <p class="d-flex justify-content-center">Êtes-vous sur de vouloir supprimer cet article ?</p> 
+                          <button type="submit" class="btn btn-danger text-white"> Je suis sur </button>
+                        </div>
+                      </div>
+                      <div class="col-2">
+                      </div>
+                    </div>
+                  
+                  </div>
+              </form> 
+             </div>
+        </div>      
+            @endforeach
+           
+    </div>
+      <div class="col-3">
+      </div>
+</div>
 </div>
 <script>
 // Get the modal

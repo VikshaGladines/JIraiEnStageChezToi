@@ -1,7 +1,14 @@
 @extends('base')
-
+@include('messenger.partials.flash')
 @section('content')
-    @include('messenger.partials.flash')
 
-    @each('messenger.partials.thread', $threads, 'thread', 'messenger.partials.no-threads')
-@stop
+<div class="container-fluid">
+<h2 class="d-flex justify-content-center pt-3"> Messagerie <h2>      
+          
+@each('messenger.partials.thread', $threads, 'thread', 'messenger.partials.no-threads')
+           
+    
+</div>
+@endsection
+    
+

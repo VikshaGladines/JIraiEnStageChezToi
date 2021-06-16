@@ -6,11 +6,14 @@ use Illuminate\Support\Facades\Storage;
 use App\Http\Controllers\FileController;
 use App\Http\Controllers\MainController;
 use App\Http\Controllers\EmailController;
+use App\Http\Controllers\ImageController;
 use App\Http\Controllers\OfferController;
 use App\Http\Controllers\DemandController;
 use App\Http\Controllers\CommentController;
+use Mailjet\LaravelMailjet\Facades\Mailjet;
 use App\Http\Controllers\OfferAdminController;
 use App\Http\Controllers\OfferRegionController;
+use Mailjet\LaravelMailjet\Contracts\CampaignDraftContract;
 
 /*
 |--------------------------------------------------------------------------
@@ -29,12 +32,12 @@ use App\Http\Controllers\OfferRegionController;
 //index
 Route::get('/home', [MainController::class, 'home'])->name('home');
 
+
+
 //profile 
 Route::get('/home/test', [MainController::class, 'profile'])->name('navbar');
 
-Route::get('/profile', [MainController::class, 'profile'])->name('profile.show');
 
-Route::post('/home', [MainController::class, 'profilestore'])->name('profile.store');
 
 
 //offer
@@ -58,6 +61,11 @@ Route::get('/file-download', [FileController::class, 'index'])->name('file.downl
 
 //AUTH-------------
 
+//profile
+Route::get('/profile', [MainController::class, 'profile'])->middleware('auth')->name('profile.show');
+
+Route::post('/home', [MainController::class, 'profilestore'])->middleware('auth')->name('profile.store');
+
 
 //comment
 Route::post('/offer/test/comment', [CommentController::class, 'store'])->middleware('auth')->name('comment.store');
@@ -69,16 +77,27 @@ Route::get('/demandes', [DemandController::class, 'create'])->middleware('auth')
 
 Route::post('/demande/store', [DemandController::class, 'store'])->middleware('auth')->name('demand.store');
 
+Route::delete('/demande/{demande:id}/delete', [DemandController::class, 'delete'])->middleware('auth')->name('demande.delete');
+
+Route::get('/demande/{demande:id}/edit', [DemandController::class, 'edit'])->middleware('auth')->name('demande.edit');
+
+Route::put('/demande/{demande:id}/update', [MainController::class, 'update'])->middleware('auth')->name('demande.update');
+
 //offer
 Route::post('/offer/store', [MainController::class, 'store'])->middleware('auth')->name('offer.store');
 
 Route::get('/create', [MainController::class, 'create'])->middleware('auth')->name('offer.creates');
 
-Route::get('/admin/offres/{offer:id}/edit', [MainController::class, 'edit'])->middleware('auth')->name('offer.edit');
+Route::get('/offres/{offer:id}/edit', [MainController::class, 'edit'])->middleware('auth')->name('offer.edit');
 
-Route::put('/admin/offres/{offer:id}/update', [MainController::class, 'update'])->middleware('auth')->name('offer.update');
+Route::put('/offres/{offer:id}/update', [MainController::class, 'update'])->middleware('auth')->name('offer.update');
 
 Route::delete('/admin/offres/{offer:id}/delete', [MainController::class, 'delete'])->middleware('auth')->name('offer.delete');
+
+//image
+Route::post('/image/store', [ ImageController::class, 'store' ])->name('image.upload.post');
+
+Route::delete('/offres/{image:id}/delete', [ImageController::class, 'destroy'])->middleware('auth')->name('image.destroy');
 
 //messages
 Route::group(['prefix' => 'messages'], function () {

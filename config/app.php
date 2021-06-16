@@ -163,6 +163,10 @@ return [
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
         Intervention\Image\ImageServiceProvider::class,
+        Mailjet\LaravelMailjet\MailjetServiceProvider::class,
+        Mailjet\LaravelMailjet\MailjetMailServiceProvider::class,
+
+        Mailjet\LaravelMailjet\Providers\CampaignDraftServiceProvider::class,
 
 
         Cmgmyr\Messenger\MessengerServiceProvider::class,
@@ -195,6 +199,8 @@ return [
 
     'aliases' => [
 
+
+        'Mailjet' => Mailjet\LaravelMailjet\Facades\Mailjet::class,
         'App' => Illuminate\Support\Facades\App::class,
         'Artisan' => Illuminate\Support\Facades\Artisan::class,
         'Auth' => Illuminate\Support\Facades\Auth::class,

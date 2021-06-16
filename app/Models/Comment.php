@@ -9,7 +9,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class Comment extends Model
 {
-    public $fillable = ['username', 'email', 'offer_id', 'content'];
+    public $fillable = ['offer_id','title', 'content', 'user_id'];
 
     use HasFactory;
 

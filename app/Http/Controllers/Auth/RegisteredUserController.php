@@ -39,6 +39,7 @@ class RegisteredUserController extends Controller
         $request->validate([
             'name' => 'required|string|max:255',
             'email' => ['required','string','email','max:255','unique:users',new EmailRule()],
+            'description' => 'required|string|max:150',
             'password' => ['required', 'confirmed', 'min:8'],
             
         ]);
@@ -49,6 +50,7 @@ class RegisteredUserController extends Controller
             'password' => Hash::make($request->password),
             'level' => $request->level,
             'city' => $request->city,
+            'description' => $request->description,
         ]);
 
     

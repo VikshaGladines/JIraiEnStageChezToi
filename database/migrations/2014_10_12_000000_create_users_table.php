@@ -20,16 +20,20 @@ class CreateUsersTable extends Migration
             $table->string('password');
             $table->integer('offer_id')->unsigned()->nullable();
             $table->integer('demande_id')->unsigned()->nullable();
+            $table->integer('comment_id')->unsigned()->nullable();
             $table->string('role')->default('USER');
             $table->string('avatar')->default('default.jpg');
             $table->string('city')->nullable();
             $table->string('level');
+            $table->string('description');
             $table->rememberToken();
             $table->timestamps();
 
             $table->foreign('offer_id')->references('id')->on('offers')->onDelete('cascade');
 
             $table->foreign('demande_id')->references('id')->on('demandes')->onDelete('cascade');
+
+            $table->foreign('comment_id')->references('id')->on('comments')->onDelete('cascade');
         });
     }
 

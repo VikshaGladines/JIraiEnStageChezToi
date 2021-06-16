@@ -8,18 +8,10 @@
   </head>
   <body>
 
-    <div class="container">
-        <div class="row">
-            <div class="col-xl-6 col-lg-6 col-sm-12 m-auto">
-                <h3> Send Email in Laravel 8 Using Mailgun </h3>
-                <p> Hey, </p>
-                <p> Welcome to Programming Fields </p>
-                <p> This is a basic demo for sending email in Laravel 8 using Mailgun. </p>
-                <p> I hope you will enjoy this post. </p>
-                <br/>
-                <br/>
-                <p> Best Regards</p>
-                <p> Team, Programming Fields </p>
+    <div>
+                <h3>
+                 
+                </h3>
             </div>
         </div>
     </div>

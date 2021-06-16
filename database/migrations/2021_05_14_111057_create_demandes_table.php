@@ -14,8 +14,8 @@ class CreateDemandesTable extends Migration
     public function up()
     {
         Schema::create('demandes', function (Blueprint $table) {
-            $table->increments('id_demandes');
-            $table->string('email')->unique();
+            $table->increments('id');
+            $table->string('email');
             $table->string('title');
             $table->string('content');
             $table->string('region');

@@ -15,16 +15,19 @@ class CreateOffersTable extends Migration
     {
         Schema::create('offers', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('email')->unique();
+            $table->string('email');
             $table->string('title');
-            $table->string('content');
+            $table->mediumText('content');
             $table->string('region');
             $table->string('ville');
+            $table->string('image')->nullable();
             $table->integer('user_id')->unsigned();
             $table->string('slug')->nullable();
             $table->timestamps();
 
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
+
+            $table->foreign('image')->references('id')->on('image_offers')->onDelete('cascade');
         });
     }
 

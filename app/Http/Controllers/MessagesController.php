@@ -5,9 +5,11 @@ namespace App\Http\Controllers;
 use Carbon\Carbon;
 use App\Models\User;
 use App\Models\Offer;
+use App\Mail\NewComment;
 use Cmgmyr\Messenger\Models\Thread;
 use Cmgmyr\Messenger\Models\Message;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Mail;
 use App\Notifications\MessageReceived;
 use Illuminate\Support\Facades\Request;
 use Illuminate\Support\Facades\Session;
@@ -103,6 +105,7 @@ class MessagesController extends Controller
             'body' => $input['message'],
         ]);
 
+
         // Sender
         Participant::create([
             'thread_id' => $thread->id,
@@ -114,8 +117,9 @@ class MessagesController extends Controller
         if (Request::has('recipients')) {
             $thread->addParticipant($input['recipients']);
         }
-
         return redirect()->route('messages');
+
+       
     }
 
     /**
@@ -157,6 +161,26 @@ class MessagesController extends Controller
         }
 
         $users = $thread->users;
+        foreach ($users as $usersss) {
+            if(Auth::id() != $usersss->id) {
+                $mail = $usersss->email;
+                
+            $to_email = $mail; // doit être égal à l'email de l'offre ou le commentaire a été posté
+                Mail::to($to_email)->send(new NewComment);
+
+                if(Mail::failures() != 0) {
+                    return redirect()->route('messages.show', $id)->with('success', 'Thanks for your comment');;
+                }
+
+                else {
+                    return "<p> Failed! Your E-mail has not sent.</p>";
+                }
+            };
+        }
+
+       
+
+        $users = $thread->users;
         //on lance la notification
         foreach ($users as $user){
             $user->notify(new MessageReceived($message));
@@ -164,7 +188,6 @@ class MessagesController extends Controller
             //event(new MessageReceived($thread, $user));
 
         }
-
         return redirect()->route('messages.show', $id);
     }
 }

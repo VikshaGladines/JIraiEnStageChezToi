@@ -1,11 +1,21 @@
-<x-guest-layout>
-    <x-auth-card>
-        <x-slot name="logo">
-            <a href="/">
-                <x-application-logo class="w-20 h-20 fill-current text-gray-500" />
-            </a>
-        </x-slot>
+@extends('base')
 
+
+@section('content')
+
+<div class="container-fluid">
+    <div class="row  ">
+        <div class="col-12">
+            <div class="d-flex justify-content-center pt-2 pb-2 border-bottom">
+                <h1> Connexion </h1>
+            </div>
+        </div>
+    </div>
+    <div class="row mb-3">
+        <div class="col-3">
+        </div>
+        <div class="col-6 mt-3 d-flex justify-content-center">
+            <div class="card p-5">
         <!-- Session Status -->
         <x-auth-session-status class="mb-4" :status="session('status')" />
 
@@ -17,14 +27,14 @@
 
             <!-- Email Address -->
             <div>
-                <x-label for="email" :value="__('Email')" />
+                <x-label for="email" :value="__('Adresse email : ')" />
 
                 <x-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autofocus />
             </div>
 
             <!-- Password -->
             <div class="mt-4">
-                <x-label for="password" :value="__('Password')" />
+                <x-label for="password" :value="__('Mot de passe : ')" />
 
                 <x-input id="password" class="block mt-1 w-full"
                                 type="password"
@@ -36,25 +46,40 @@
             <div class="block mt-4">
                 <label for="remember_me" class="inline-flex items-center">
                     <input id="remember_me" type="checkbox" class="rounded border-gray-300 text-indigo-600 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50" name="remember">
-                    <span class="ml-2 text-sm text-gray-600">{{ __('Remember me') }}</span>
+                    <span class="ml-2 text-sm text-gray-600">{{ __('Se souvenir de moi ') }}</span>
                 </label>
             </div>
-
-            <div class="flex items-center justify-end mt-4">
+            <div class="d-flex justify-content-center mt-2 mb-2">
+                    <x-button class="btn btn-primary">
+                        {{ __('Connexion') }}
+                    </x-button>
+            </div>
+            <div class="flex items-center justify-end mt-1 p-2 border-bottom">
                 @if (Route::has('password.request'))
+                <div class="d-flex justify-content-center">
                     <a class="underline text-sm text-gray-600 hover:text-gray-900" href="{{ route('password.request') }}">
-                        {{ __('Forgot your password?') }}
+                        {{ __('Mot de passe oublié ?') }}
                     </a>
+                </div>
+            </div>
                 @endif
-                    <br>
-                <p> 
-                <a class="underline text-sm text-gray-600 hover:text-gray-900" href="{{ route('register') }}">inscription </a>
-                </p>
+                <div class="d-flex justify-content-center border-bottom p-2">
+                    <p class="lead"> Pas en encore inscrit ?</p>
+                    
+                </div>  
+                <div class="d-flex justify-content-center mt-3">
+                <button class="btn btn-primary mt-2 mb-2"> 
+                <a class="text-white" href="{{ route('register') }}">Inscription </a>
+                </button>
+            </div>
 
-                <x-button class="ml-3">
-                    {{ __('Log in') }}
-                </x-button>
+               
+            </div>
             </div>
         </form>
-    </x-auth-card>
-</x-guest-layout>
+    </div>
+    <div class="col-3">
+    </div>
+    </div>
+    </div>  
+@endsection

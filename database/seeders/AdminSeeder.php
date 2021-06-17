@@ -17,16 +17,16 @@ class AdminSeeder extends Seeder
     { 
         
         User::create([
-            'email' => 't.ducugnon@gmail.com',
+            'email' => 'admin1@admin.com',
             'name' => 'admin1',
             'password' => Hash::make('test'),
             'role' => 'ADMIN',
             'level' => 'level 1',
             'description' => 'description',
-            'city' => 'Lyon'
+            'city' => 'city'
         ]);
         User::create([
-            'email' => 'thomas.ducugnons@gmail.com',
+            'email' => 'admin2@admin.com',
             'name' => 'admin2',
             'password' => Hash::make('test'),
             'role' => 'ADMIN',

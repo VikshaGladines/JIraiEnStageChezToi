@@ -11,7 +11,9 @@
 
 Pour tester : 
 
-compte : 
+compte : AdminSeeder -> admin1@admin.com   /  admin2@admin.com
+
+Attention -> envoie d'un mail automatique lors d'un commentaire ou d'un messages privé au créateur de l'offre ou compte avec qui vous parlé en message privé.
 
 
 

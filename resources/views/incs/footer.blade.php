@@ -1,3 +1,4 @@
+<footer>
 <div class="row footers" style="background-color: black;">
     <div class="col-12">
         <div class="d-flex justify-content-center">
@@ -37,3 +38,4 @@
             </div>
     </div>
 </div>
+</footer>

@@ -81,5 +81,32 @@ class EmailSeeder extends Seeder
         DB::table('emails')->insert([        
             'email' => 'etud.u-picardie.fr',
         ]);
+        DB::table('emails')->insert([        
+            'email' => 'etud.univ-angers.fr',
+        ]);
+        DB::table('emails')->insert([        
+            'email' => 'etu.u-bordeaux.fr',
+        ]);
+        DB::table('emails')->insert([        
+            'email' => 'etu.unicaen.fr',
+        ]);
+        DB::table('emails')->insert([        
+            'email' => 'etu.univ-cotedazur.fr ',
+        ]);
+        DB::table('emails')->insert([        
+            'email' => 'etu.u-paris.fr',
+        ]);
+        DB::table('emails')->insert([        
+            'email' => 'ens.uvsq.fr',
+        ]);
+        DB::table('emails')->insert([        
+            'email' => 'etu.univ-rouen.fr',
+        ]);
+        DB::table('emails')->insert([        
+            'email' => 'univ-tlse3.fr',
+        ]);
+        DB::table('emails')->insert([        
+            'email' => 'etu.univ-tours.fr',
+        ]);
     }
 }

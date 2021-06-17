@@ -14,7 +14,9 @@
 </head>
 <body>
    @include('incs.navbar')
+   {{--<div style="background-image: url({{ asset('image/test2.png') }}); background-repeat: no-repeat;"> --}}
    @yield('content')
+   {{--</div>--}}
    @include('incs.footer')
 </body>
 </html>

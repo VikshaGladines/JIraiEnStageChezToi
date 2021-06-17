@@ -48,6 +48,11 @@
           @foreach ($image as $images)
          
           <div class="card m-3">
+            @if (Auth::user())
+                
+            @if (Auth::user()->id == $offer->user_id)
+                
+           
             <div class="d-flex justify-content-end">
             <button type="button" style="" class="btn btn-danger p-2 m-1" onclick="document.getElementById('model-open').style.display='block'"> Supprimer </button>
             <form action={{ route('image.destroy', $images->id) }} method="POST">
@@ -71,9 +76,11 @@
               </div>
             </div>
           
-          </div>
+          </div> 
           </form>
         </div>
+        @endif
+        @endif
             <div class="card-body d-flex justify-content-center">
               <img class="" src="/uploads/avatars/{{ $images->image }}">
             </div>

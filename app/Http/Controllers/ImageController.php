@@ -3,9 +3,10 @@
 namespace App\Http\Controllers;
 
 
-use Intervention\Image\Facades\Image;
 use App\Models\ImageOffer;
 use Illuminate\Http\Request;
+use Intervention\Image\Facades\Image;
+use Illuminate\Support\Facades\Redirect;
 
 class ImageController extends Controller
 {
@@ -57,7 +58,7 @@ class ImageController extends Controller
            
     		
         }
-        return redirect()->route('home');
+        return Redirect::back();
        
     
 }
@@ -105,6 +106,6 @@ class ImageController extends Controller
     public function destroy(ImageOffer $image)
     {
         $image->delete();
-        return redirect()->route('home')->with('success', "La photo a bien été supprimer !");
+        return Redirect::back();
     }
 }

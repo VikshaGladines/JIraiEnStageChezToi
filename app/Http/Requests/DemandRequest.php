@@ -26,7 +26,7 @@ class DemandRequest extends FormRequest
         return [
             'email' => 'required',
             'title' => 'required|max:255',
-            'content' => 'required',
+            'content' => 'required|max:1300',
             'region' => 'required',
             'ville' => 'required'
         ];

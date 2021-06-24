@@ -12,7 +12,7 @@ use App\Http\Requests\CommentRequest;
 
 class CommentController extends Controller
 {
-    public function store (Request $request) {
+    public function store (CommentRequest $request) {
         $comment = Comment::create([
             'username' => $request->input('username'),
             'title' => $request->input('title'),

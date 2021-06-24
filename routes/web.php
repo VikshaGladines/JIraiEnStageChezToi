@@ -38,7 +38,8 @@ Route::get('/home', [MainController::class, 'home'])->name('home');
 Route::get('/home/test', [MainController::class, 'profile'])->name('navbar');
 
 
-
+//legal
+Route::get('/home/mentions légales', [MainController::class, 'mention'])->name('mentions');
 
 //offer
 Route::get('/test/{region}', [OfferRegionController::class, 'index'])->name('offre.region');
@@ -117,7 +118,7 @@ Route::get('/home/Admin', [MainController::class, 'AdminHome'])->middleware('adm
 
 Route::get('admin/offres', [MainController::class, 'offers'])->middleware('admin')->name('offer.show');
 
-Route::get('/admin/offre', [OfferAdminController::class, 'index'])->middleware('admin')->name('admin.test');
+
 
 
 

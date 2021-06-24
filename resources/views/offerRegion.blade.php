@@ -6,11 +6,11 @@
         <div class="col-6 border-right ">
            
         @if ($rien == false)
-                <h3 class="d-flex justify-content-xl-center mb-5 p-5 border-bottom font-weight-bold text-Ableu"> Il n'y a pas d'offre de cette region</h3>
+                <h3 class="d-flex justify-content-xl-center mb-5 p-5 border-bottom font-weight-bold"> Il n'y a pas d'offre de cette region</h3>
         @endif
 
         @if ($rien ==true) 
-        <h3 class="d-flex justify-content-xl-center mb-5 p-5 font-weight-bold text-Ableu" >  Voici les offres </h3>
+        <h3 class="d-flex justify-content-xl-center mb-5 p-5 font-weight-bold" >  Voici les offres </h3>
 
             @foreach ($offerRegion as $offer)
             <div class="d-flex justify-content-xl-center mt-5 mb-5">
@@ -30,10 +30,10 @@
         <div class="col-6">
 
         @if ($rien == false)
-            <h3 class="d-flex justify-content-xl-center mb-5 p-5 border-bottom font-weight-bold text-Avert"> il n'y a pas de demande de cette region</h3>
+            <h3 class="d-flex justify-content-xl-center mb-5 p-5 border-bottom font-weight-bold"> il n'y a pas de demande de cette region</h3>
         @endif
         @if ($rien ==true) 
-        <h3 class="d-flex justify-content-xl-center mb-5 p-5 font-weight-bold text-Avert" >  Voici les demandes  </h3>
+        <h3 class="d-flex justify-content-xl-center mb-5 p-5 font-weight-bold " >  Voici les demandes  </h3>
         @foreach ($demandRegion as $demand)
             <div class="d-flex justify-content-xl-center mt-5 mb-5">
                 <div class="card border-bottom styleoffer">

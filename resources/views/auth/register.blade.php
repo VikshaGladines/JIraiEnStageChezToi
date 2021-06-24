@@ -161,7 +161,7 @@ $erreur = "cette adresse mail est déja prise";
                             <input id="coche" class=""
                                             type="checkbox"
                                             name="coche"
-                                            required> j'accepte la clause RGPD
+                                            required> j'accepte l'utilisation de mes données
                         
                         </div>
 

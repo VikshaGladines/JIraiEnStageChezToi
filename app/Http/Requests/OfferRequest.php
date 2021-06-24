@@ -27,7 +27,7 @@ class OfferRequest extends FormRequest
             'email' => 'required',
             'title' => 'required|max:255',
             //'slug' => 'required|unique:offer'.$this->id,
-            'content' => 'required',
+            'content' => 'required|max:1300',
             'region' => 'required',
             'ville' => 'required'
         ];

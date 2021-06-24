@@ -33,7 +33,7 @@ class MainController extends Controller
     {   
         $offers = Offer::all();
         $demandes = demande::all();
-        return view('IndexOffer', [
+        return view('Admin.IndexOffer', [
             'IndexOffer' => $offers,
             'demande' => $demandes
         ]);
@@ -182,6 +182,17 @@ class MainController extends Controller
         return view('AdminHome', [
             'lastoffer' => $offers
         ]);
+    }
+
+    public function mention() {
+
+        return view('legal.MentionLégale');
+
+    }
+    public function confidentialité() {
+
+        return view('legal.Confidentialité');
+        
     }
 }
 

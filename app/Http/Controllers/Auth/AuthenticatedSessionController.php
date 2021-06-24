@@ -32,7 +32,7 @@ class AuthenticatedSessionController extends Controller
 
         $request->session()->regenerate();
             if (Auth::user()->role === 'ADMIN') {
-            return redirect()->intended('/home/Admin');
+            return redirect()->intended('/home');
         }
         else {
             return redirect()->intended('/home');

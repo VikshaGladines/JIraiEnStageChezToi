@@ -1,17 +1,21 @@
 @import url(https://fonts.googleapis.com/css?family=Nunito);
+
 @charset "UTF-8";
 @font-face {
-  font-family: "futur";
-  src: url('futur.ttf') format('ttf');
+  font-family: "Luciole-Regular";
+  src: url('Luciole-Regular.ttf') format('ttf');
 }
 
 *{
   margin: 0;
   padding: 0;
-  font-family: "futur";
-  src: url('futur.ttf') format('ttf');
+  font-family: "Luciole-Regular";
+  src: url('/public/fonts/vendor/bootstrap-sass/bootstrap/Luciole-Regular.ttf') format('ttf');
   }
-
+html {
+  font-family: "Luciole-Regular";
+  src: url('/public/fonts/vendor/bootstrap-sass/bootstrap/Luciole-Regular.ttf') format('ttf');
+}
 
   .container-fluid {
     margin-right: auto;
@@ -80,8 +84,8 @@
  
 }
 .texttaille {
-  font-family: "futur";
-  src: url('futur.ttf') format('ttf');
+  font-family: "No";
+  src: url('Luciole-Regular.ttf') format('ttf');
   font-size: 20px;
 }
 .dropcolor {
@@ -239,7 +243,8 @@ article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
 }
 
 body {
-  font-family: "Nunito", sans-serif;
+  font-family: "Luciole-Regular";
+  src: url('/public/fonts/vendor/bootstrap-sass/bootstrap/Luciole-Regular.ttf') format('ttf');
   font-size: 0.9rem;
   font-weight: 400;
   line-height: 1.6;
@@ -505,7 +510,7 @@ legend {
   max-width: 196px;
   transform: translateY(-50%);
   position: relative;
-  top: 42px;
+  top: 50px;
   display: grid;
   place-items: center;
 }

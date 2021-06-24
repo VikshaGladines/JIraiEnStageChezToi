@@ -17,22 +17,22 @@ class AdminSeeder extends Seeder
     { 
         
         User::create([
-            'email' => 'admin1@admin.com',
-            'name' => 'admin1',
-            'password' => Hash::make('test'),
+            'email' => 't.ducugnon@gmail.com',
+            'name' => 'Thomas',
+            'password' => Hash::make('Viksha+Thomas'),
             'role' => 'ADMIN',
-            'level' => 'level 1',
-            'description' => 'description',
-            'city' => 'city'
-        ]);
-        User::create([
-            'email' => 'admin2@admin.com',
-            'name' => 'admin2',
-            'password' => Hash::make('test'),
-            'role' => 'ADMIN',
-            'level' => 'level 1',
+            'level' => 'rien',
             'description' => 'description',
             'city' => 'Lyon'
+        ]);
+        User::create([
+            'email' => 'innovationsociale@anef.com',
+            'name' => 'Mathilde Veille',
+            'password' => Hash::make('Jesct2021'),
+            'role' => 'ADMIN',
+            'level' => '5eme année',
+            'description' => 'Vp innovation sociale en charge du projet',
+            'city' => 'Tours'
         ]);
         
     }

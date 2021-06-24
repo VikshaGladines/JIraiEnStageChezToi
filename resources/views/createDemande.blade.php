@@ -30,15 +30,23 @@
                         <div class="d-flex justify-content-center p-1">
                         <input type="text" id="title "name="title" size="30" required>
                         </div>
-
+                        @if ($errors->first('title'))
+                        <div class="alert alert-danger">
+                        <p> Titre de la demande trop long </p>
+                        </div>
+                        
+                        @endif 
                         <label class="d-flex justify-content-center lead" for="desc"> Veuillez saisir la description de la demande </label>
 
                         <div class="d-flex justify-content-center p-1">
                         <textarea id="Tiny-text" id="desc"name="content" rows="5" cols="50" required></textarea>
                         </div>
-                        @if($errors->any())
-                        <div class="text-danger d-flex justify-content-center lead">{{ implode('', $errors->all('Description trop long')) }}</div>
-                        @endif
+                        @if ($errors->first('content'))
+                        <div class="alert alert-danger">
+                        <p> Description de la demande trop long </p>
+                        </div>
+                        
+                        @endif 
                         <label class="d-flex justify-content-center lead" for="select"> Veuillez choisir la région de la demande </label>
 
                         <div class="d-flex justify-content-center p-1">
@@ -69,6 +77,13 @@
                         <div class="d-flex justify-content-center p-1">
                         <input type="text" id="ville" name="ville" size="30" required>
                         </div>
+
+                        @if ($errors->first('ville'))
+                        <div class="alert alert-danger">
+                        <p> Nom de la ville trop long </p>
+                        </div>
+                        
+                        @endif 
                         <div class="d-flex justify-content-center p-1">
                         <button class="d-flex justify-content-center btn btn-primary mt-3" type="submit">Soumettre la demande </button>
                         </div>

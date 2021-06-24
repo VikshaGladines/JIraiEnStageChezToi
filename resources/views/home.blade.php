@@ -3,60 +3,67 @@
 @section('content')
 <div class="container-fluid">
 <div class="row " >
-    <div class="col-sm-12">
-        <div class="mx-auto p-4 border-bottom" style="width: 100%;background-image: url('image/row_bg.jpg'); position: initial; background-repeat: no-repeat; padding-top: 150px; padding-bottom: 0px; background-position: 50% -15.025px; margin-top: 5px;">
-            <p class="d-flex justify-content-xl-center texttaille mx-auto " style="width: 1150px;"> Le projet "J'irai en stage chez toi" a pour objectif de permettre aux étudiant.e.s sages-femmes d'échanger des logements afin de rendre les lieux de stages plus accessibles et diversifiés.
+    <div class="col-2" style="background-image: url('image/JESCT trame.png'); background-repeat: repeat; height: 350px;">
+    </div>
+
+    <div class="col-8 d-flex justify-content-center pt-5">
+        <div class=" " style="">
+            <p class="d-flex justify-content-xl-center texttaille mx-auto " style="width: 1150px; font-family: 'Luciole-Regular'; src: url('/public/fonts/vendor/bootstrap-sass/bootstrap/Luciole-Regular.ttf') format('ttf');"> Le projet "J'irai en stage chez toi" a pour objectif de permettre aux étudiant.e.s sages-femmes d'échanger des logements afin de rendre les lieux de stages plus accessibles et diversifiés.
             En effet, la formation en maïeutique demande de nombreux stages et les CHU de référence ne sont pas toujours aptes à accueillir tout.e.s les étudiant.e.s. De plus, ces stages à l’extérieur permettent de découvrir des pratiques et des protocoles différents de la formation de référence.
             Cependant, les revenus des étudiant.e.s étant limités et les périodes de stages relativement courtes, trouver un logement s’avère être parfois une tâche difficile.
             C’est pourquoi l’ANESF propose le projet “J’irai en stage chez toi”, reposant sur un principe d’entraide et de solidarité entre étudiant.e.s sages-femmes.</p> <br><br>
         </div>
     </div>
+
+    <div class="col-2" style="background-image: url('image/JESCT trame.png'); background-repeat: repeat; height: 350px;">
+        </div>
+    </div>
 </div>
 
 <div class="row">
-    <div class="col-sm-2 bg-primary"> 
+    <div class="col-sm-2" style="background-image: url('image/JESCT trame.png'); background-repeat: repeat;"> 
        
     </div>
 
-    <div class="col-sm-8"> 
+    <div class="col-sm-8" > 
         <div class="d-flex justify-content-xl-center p-3 border-bottom text-rose">
             <h2> Recherche par région </h2>
         </div>
         <div class="d-flex justify-content-xl-center p-4 border-bottom">
            
-            <img style="position: relative; right: 15px;"src="{{ asset('image/region3.webp') }}" alt="La France et ses région" usemap='#reg'>
+            <img style="position: relative; right: 15px; width: 750px; height: 648px;"src="{{ asset('image/Carte de France.png') }}" alt="La France et ses région" usemap='#reg'>
             <map name='reg'>
-                <area target="" alt="Bretagne" title="" href="{{ url('test/Bretagne') }}" coords="95,148,89,118,83,117,76,120,71,122,64,121,55,121,47,119,41,122,33,125,28,132,45,139,42,153,40,158,35,160,34,154,54,161,55,168,67,171,75,174,85,177,89,182,97,186,104,189,113,193,125,189,133,183,148,181,155,179,161,168,162,159,163,150,163,143,153,140,141,135,126,136,114,131,101,129,96,123,93,130" shape="poly">
-                <area target="" alt="Normandie" title="" href="{{ url('test/Normandie') }}" coords="210,118,272,60,279,72,279,88,277,99,273,111,268,117,263,130,243,133,239,141,239,149,237,158,229,160,223,154,219,150,212,149,207,148,203,144,193,144,180,146,174,141,168,140,159,140,153,139,153,130,153,99,148,88,148,79,156,72,191,97,203,100,214,97,226,97,265,67,263,65,265,67,248,70,234,73,221,83,247,82,229,80,216,103,256,75" shape="poly">
-                <area target="" alt="Haut-De-France" title="" href="{{ url('test/Haut-de-France') }}" coords="321,76,288,10,311,4,338,32,350,40,357,45,338,25,368,50,371,62,370,79,363,94,355,100,351,108,345,120,345,129,336,118,330,118,325,111,317,115,308,114,299,112,288,108,285,101,281,91,281,81,280,72,277,62,275,55,279,40,279,26,281,18,287,6" shape="poly">
-                <area target="" alt="grand est" title="" href="{{ url('test/Grand Est') }}" coords="492,175,515,152,521,130,500,122,476,118,463,106,448,101,434,99,423,98,415,90,407,82,401,77,393,74,386,72,378,77,373,88,368,96,362,108,356,116,352,126,347,135,347,141,345,155,350,168,355,177,363,182,372,185,394,184,400,188,402,197,413,206,425,198,447,183,460,184,465,189,479,197,489,205,493,215,502,196,506,178,507,169,516,152,453,183" shape="poly">
-                <area target="" alt="Ile de France" title="" href="{{ url('test/Ile-de-France') }}" coords="302,112,322,119,332,121,338,127,339,137,337,149,332,153,327,156,318,162,313,167,307,167,323,169,295,158,286,155,281,146,276,139,272,126,270,119,286,111,277,109,298,110" shape="poly">
-                <area target="" alt="Pays de la Loire" title="" href="{{ url('test/Pays de la Loire') }}" coords="157,196,128,253,145,265,172,267,166,233,200,221,212,200,227,190,233,178,234,163,219,156,213,150,198,145,186,145,176,148,171,147,156,181,129,189,118,195,111,203,122,205,123,219,123,232,130,248,132,254" shape="poly">
-                <area target="" alt="centre-val-de-loire" title="" href="{{ url('test/Centre-Val de Loire') }}" coords="266,204,264,135,278,151,290,163,299,168,305,171,314,176,323,179,320,187,314,195,317,205,318,219,318,229,320,238,320,248,311,256,300,261,295,265,281,267,274,269,259,269,250,269,246,259,241,250,236,244,232,235,227,229,219,230,212,225,205,216,213,201,225,193,234,190,237,178,240,171,245,152,249,136,265,134" shape="poly">
-                <area target="" alt="Bourgogne-Franche-Comté" title="" href="{{ url('test/Bourgogne-Franche-Comté') }}" coords="389,242,388,187,416,209,442,191,461,193,472,197,481,209,478,222,469,238,456,252,448,261,437,273,435,282,424,284,415,277,407,272,395,282,393,287,358,284,349,263,339,254,323,246,323,234,324,220,322,198,327,167,337,163,342,163,337,163,359,184,390,188" shape="poly">
-                <area target="" alt="Nouvelle-Aquitaine" title="" href="{{ url('test/Nouvelle-Aquitaine') }}" coords="171,341,125,433,130,449,135,460,145,463,153,469,160,471,182,454,171,433,184,409,201,408,216,407,229,403,231,385,242,371,255,358,268,354,280,359,287,345,294,336,295,324,294,316,293,308,300,299,293,286,289,281,280,276,268,276,253,277,242,267,231,247,219,242,209,233,199,230,187,232,175,236,174,249,178,257,173,272,160,273,160,290,152,285,153,276,157,296,154,306,157,321,163,328,169,341,172,344,139,402,129,425,136,429,144,380,142,350,147,335,150,324,171,341,164,349" shape="poly">
-                <area target="" alt="Auvergne-Rhone-alpes" title="" href="{{ url('test/Auvergne-Rhone-Alpes') }}" coords="385,337,372,295,380,291,405,280,413,281,419,286,426,291,438,293,444,295,456,295,466,280,472,287,474,301,474,316,483,334,481,346,468,354,456,357,450,357,449,366,434,375,424,382,419,393,417,400,417,412,398,405,386,404,378,404,364,398,348,371,338,365,331,361,318,368,311,365,296,366,293,354,286,373,277,362,286,355,286,345,297,341,301,327,299,317,299,310,303,301,304,294,302,284,299,274,312,264,317,258,327,261,345,266,330,260,356,276,373,302" shape="poly">
-                <area target="" alt="Occitanie" title="" href="{{ url('test/Occitanie') }}" coords="282,432,290,377,306,366,312,379,324,368,332,372,349,375,352,383,355,391,352,403,368,403,378,405,384,425,377,434,371,442,365,446,350,450,336,453,324,461,317,464,313,470,310,481,306,497,308,505,299,511,288,512,274,511,265,509,260,502,255,496,221,485,202,482,187,482,174,477,172,469,182,460,186,444,180,435,178,427,187,419,194,415,213,413,226,408,226,400,233,393,237,387,243,381,246,374,250,366,254,361,268,364,287,381,291,389" shape="poly">
-                <area target="" alt="Provence-Alpes-Cote-D'Azur" title="" href="{{ url('test/Provence-Alpes-Côte d’Azur') }}" coords="451,433,422,398,428,383,441,371,453,370,462,362,468,366,479,376,475,385,475,398,476,410,488,414,493,418,500,419,507,421,503,435,489,441,483,448,473,454,463,463,454,473,438,471,426,466,418,465,410,458,396,455,390,453,385,451,382,444,387,433,389,426,393,413,389,405,399,407,421,418,429,407" shape="poly">
-                <area target="" alt="Corse" title="" href="{{ url('test/Corse') }}" coords="505,561,501,532,515,512,518,534,520,549,518,562,512,582,509,596,501,589,496,580,492,570,489,563,489,553,490,539,502,532" shape="poly">
+                <area target="" alt="Bretagne" title="" href="{{ url('test/Bretagne') }}" coords="107,224,119,229,126,230,134,223,144,218,155,213,161,213,171,208,173,196,175,184,174,172,167,173,158,167,143,158,135,161,122,161,115,162,108,165,101,160,91,145,85,143,75,145,64,151,50,152,41,152,30,152,23,157,22,162,20,168,31,185,31,192,34,197,34,203,83,225,103,229,110,230" shape="poly">
+                <area target="" alt="Normandie" title="" href="{{ url('test/Normandie') }}" coords="144,88,158,121,155,138,163,155,158,160,160,166,174,163,183,169,199,171,209,169,215,168,220,173,232,172,237,177,240,183,247,186,254,191,255,183,261,173,256,164,278,153,283,142,291,132,298,121,295,97,297,87,286,69,263,77,243,83,236,90,231,99,244,105,228,113,217,120,202,116,183,109,176,109,168,90" shape="poly">
+                <area target="" alt="Haut-De-France" title="" href="{{ url('test/Haut-de-France') }}" coords="304,123,301,113,301,92,301,77,291,69,291,61,293,52,295,33,298,19,301,11,314,11,319,5,327,4,334,9,335,20,343,25,355,25,367,33,371,41,382,45,389,51,398,54,399,70,400,82,399,97,395,105,390,114,379,117,379,126,378,133,376,141,374,147,363,142,361,136,343,133,330,131,320,126" shape="poly">
+                <area target="" alt="grand est" title="" href="{{ url('test/Grand Est') }}" coords="396,115,379,120,383,137,371,149,369,160,371,177,389,205,400,211,414,210,420,205,431,209,437,221,443,229,452,229,467,227,466,221,483,209,507,209,525,221,530,229,543,238,551,230,551,220,552,205,551,196,555,165,572,139,536,122,528,128,519,122,509,124,497,107,486,103,479,109,468,102,457,109,451,98,436,87,427,78,431,61,415,75,402,77,403,86,398,95" shape="poly">
+                <area target="" alt="Ile de France" title="" href="{{ url('test/Ile-de-France') }}" coords="324,153,306,129,295,128,291,142,292,153,298,163,302,176,307,183,320,187,333,190,335,197,347,194,347,193,347,194,351,185,363,181,369,178,369,166,369,157,361,145,350,137,358,138,339,134,327,133,318,129,308,130" shape="poly">
+                <area target="" alt="Pays de la Loire" title="" href="{{ url('test/Pays de la Loire') }}" coords="124,271,128,286,137,298,145,306,150,311,163,316,174,316,182,316,187,305,191,295,181,280,193,270,201,269,216,266,224,258,226,246,229,238,233,230,245,230,249,220,252,212,255,201,256,194,243,190,241,182,226,177,215,171,207,171,195,171,179,172,182,184,184,194,181,201,177,205,173,209,170,214,162,220,146,220,137,226,125,231,117,238,113,243" shape="poly">
+                <area target="" alt="centre-val-de-loire" title="" href="{{ url('test/Centre-Val de Loire') }}" coords="287,144,307,183,324,189,327,200,346,200,354,209,346,227,346,249,351,256,355,280,352,288,334,296,332,306,323,307,318,313,290,312,279,317,260,301,261,291,250,273,237,276,221,261,231,231,240,233,252,225,263,200,257,197,256,187,264,179,266,171,258,165,270,157,277,157" shape="poly">
+                <area target="" alt="Bourgogne-Franche-Comté" title="" href="{{ url('test/Bourgogne-Franche-Comté') }}" coords="376,195,370,187,359,189,355,199,356,209,351,224,350,240,350,253,351,267,355,272,357,284,357,293,360,299,370,296,375,294,380,292,385,297,388,303,396,313,397,325,401,332,409,327,418,321,430,324,434,316,437,308,443,306,451,307,459,314,464,318,483,321,491,310,497,296,504,287,511,274,518,269,523,259,531,235,520,219,501,212,482,208,471,220,460,230,452,236,444,232,436,225,432,216,424,208,403,213,391,213,384,202" shape="poly">
+                <area target="" alt="Nouvelle-Aquitaine" title="" href="{{ url('test/Nouvelle-Aquitaine') }}" coords="264,430,260,451,258,459,251,467,245,471,236,473,228,473,217,475,206,478,206,487,204,494,201,502,212,506,212,512,212,518,208,524,204,530,197,538,188,551,180,550,172,539,166,539,156,538,152,530,148,518,132,514,144,502,162,438,171,431,163,418,164,368,174,377,187,406,184,374,176,360,164,350,162,338,171,345,169,322,196,314,187,278,201,269,228,266,235,271,237,278,252,277,257,289,262,301,275,313,280,318,295,316,311,314,320,314,327,319,332,328,332,334,335,343,334,349,326,354,328,359,333,363,333,371,332,376,329,382,324,386,320,395,317,401,312,408,299,409,290,406,285,409,283,414,279,424" shape="poly">
+                <area target="" alt="Auvergne-Rhone-alpes" title="" href="{{ url('test/Auvergne-Rhone-Alpes') }}" coords="331,372,332,362,332,355,332,345,333,330,327,318,328,309,335,300,342,296,353,293,361,297,372,296,384,304,390,309,392,319,394,328,398,333,407,333,418,327,429,332,437,322,443,309,455,312,463,321,471,322,480,321,490,317,485,325,487,331,499,325,503,317,514,313,519,314,523,328,526,341,526,351,530,365,540,377,537,389,529,393,521,396,511,398,499,400,502,409,495,416,485,423,475,429,471,437,467,445,468,463,475,461,459,461,445,454,431,454,438,457,407,452,401,444,394,435,394,425,383,421,375,420,371,414,359,418,355,422,352,429,347,421,340,415,337,421,329,426,319,433,315,425,315,417,315,410,316,401,322,392,326,383" shape="poly">
+                <area target="" alt="Occitanie" title="" href="{{ url('test/Occitanie') }}" coords="383,523,359,537,351,549,356,565,357,587,340,587,332,587,321,587,310,587,303,582,291,579,291,570,283,568,241,557,239,564,224,567,212,566,196,555,210,523,204,507,202,483,210,480,225,476,240,474,253,468,255,454,259,443,269,433,279,421,279,411,287,411,290,417,305,416,307,423,309,433,315,434,322,435,337,421,344,431,348,434,354,420,367,412,372,421,379,419,383,425,390,430,392,441,395,448,398,452,403,459,412,458,420,456,422,463,432,474,426,483,422,494,419,500,415,507,408,510,401,506" shape="poly">
+                <area target="" alt="Provence-Alpes-Cote-D'Azur" title="" href="{{ url('test/Provence-Alpes-Côte d’Azur') }}" coords="475,460,469,451,471,444,479,433,489,425,492,419,502,418,503,405,511,402,520,404,523,409,530,414,535,417,537,425,531,429,533,450,544,460,559,463,564,464,563,478,563,486,556,489,550,493,544,497,539,504,534,509,527,514,522,525,511,531,503,535,495,535,486,534,478,528,466,527,460,520,451,511,444,513,434,514,427,515,419,509,424,501,431,493,435,481,436,474,435,466,435,461,448,460,459,463,466,468" shape="poly">
+                <area target="" alt="Corse" title="" href="{{ url('test/Corse') }}" coords="594,524,598,552,601,566,601,577,599,588,599,597,599,606,594,618,590,631,577,626,577,619,571,612,573,601,559,599,565,589,559,582,559,572,559,558,571,553,580,550,587,545" shape="poly">
 
-                <area target="" alt="Guyane" title="" href="{{ url('test/Guyane') }}" coords="54,591,43" shape="circle">
-                <area target="" alt="Reunion" title="" href="{{ url('test/Reunion') }}" coords="158,592,148,568,133,575,128,588,134,601,142,607,156,612,172,614,182,609,180,599,174,592,171,585,169,577,166,570,150,567" shape="poly">
-                <area target="" alt="Martinique" title="" href="{{ url('test/Martinique') }}" coords="233,583,218,560,215,581,223,593,232,598,237,602,228,612,245,612,261,612,255,596,244,584,241,576,226,562,213,567" shape="poly">
-                <area target="" alt="Guadeloupe" title="" href="{{ url('test/Guadeloupe') }}" coords="316,591,346,579,334,569,328,561,331,594,353,586,325,572,298,586,298,608,306,621,316,613,317,606,323,596,338,583" shape="poly">
-                <area target="" alt="Mayotte" title="" href="{{ url('test/Mayotte') }}" coords="411,572,413,591,429,578,403,557,394,566,402,577,406,583,406,595,423,586,425,628,397,622,426,587,417,629,423,586,411,631" shape="poly">
+                <area target="" alt="Guyane" title="" href="{{ url('test/Guyane') }}" coords="671,345,49" shape="circle">
+                <area target="" alt="Reunion" title="" href="{{ url('test/Reunion') }}" coords="672,445,29" shape="circle">
+                <area target="" alt="Martinique" title="" href="{{ url('test/Martinique') }}" coords="671,84,39" shape="circle">
+                <area target="" alt="Guadeloupe" title="" href="{{ url('test/Guadeloupe') }}" coords="674,247,32" shape="circle">
+                <area target="" alt="Mayotte" title="" href="{{ url('test/Mayotte') }}" coords="677,167,31" shape="circle">
             </map>
         </div>
  
     </div>
-    <div class="col-sm-2 bg-primary">
+    <div class="col-sm-2" style="background-image: url('image/JESCT trame.png'); background-repeat: repeat;">
        
     </div>
 </div>
 
 <div class="row">
     <div class="col-12">
-    <p class="d-flex justify-content-xl-center p-5" style="background-color: black;background-image: url('image/row_bg2.jpg'); position: initial;;background-position: center top;background-repeat: no-repeat;background-attachment: scroll;background-size: cover;padding-top:0px;padding-bottom:270px;"><a href="{{ route ('file.download.index') }}" class="lead  border border-primary p-3">Télécharger la charte JESCT</a></p>
+    <p class="d-flex justify-content-xl-center p-5" style="background-color: #F2F2F2"><a href="{{ route ('file.download.index') }}" class="lead  border border-primary p-3">Télécharger la charte JESCT</a></p>
     </div>
 </div>
 
@@ -70,7 +77,7 @@
         <button class="btn btn-primary" onclick="HideFunction()">Afficher les offres </button>
     </div>
 </div>
-<div class="row p-4 text-center displaynone" id="offerID">
+<div class="row p-4 text-center displaynone" id="offerID" style="display: none;">
     <div class="col-12">
         @foreach ($lastoffer as $offers)
         <div class="border border-primary d-inline-flex justify-content-around w-25 text-center">         

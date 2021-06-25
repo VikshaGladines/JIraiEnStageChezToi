@@ -505,15 +505,7 @@ legend {
   white-space: normal;
 }
 
-.logo {
-  max-height: 116px;
-  max-width: 196px;
-  transform: translateY(-50%);
-  position: relative;
-  top: 50px;
-  display: grid;
-  place-items: center;
-}
+
 
 progress {
   vertical-align: baseline;

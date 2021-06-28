@@ -189,11 +189,9 @@ class MainController extends Controller
         return view('legal.MentionLégale');
 
     }
-    public function confidentialité() {
-
-        return view('legal.Confidentialité');
-        
-    }
+   public function test() {
+       'test';
+   }
 }
 
 

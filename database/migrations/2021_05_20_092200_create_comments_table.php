@@ -18,7 +18,7 @@ class CreateCommentsTable extends Migration
             $table->bigInteger('offer_id')->unsigned();
             $table->string('title');
             $table->mediumText('content');
-            $table->bigInteger('user_id')->unsigned();
+            $table->integer('user_id')->unsigned();
             $table->timestamps();
 
             $table->foreign('offer_id')->references('id')->on('offers')->onDelete('cascade');

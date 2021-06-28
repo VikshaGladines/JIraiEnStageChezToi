@@ -25,7 +25,7 @@ class CreateOffersTable extends Migration
             $table->string('slug')->nullable();
             $table->timestamps();
 
-            $table->foreign('user_id')->references('id')->on('users');
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
 
         });
     }

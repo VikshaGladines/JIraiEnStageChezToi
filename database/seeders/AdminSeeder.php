@@ -26,7 +26,7 @@ class AdminSeeder extends Seeder
             'city' => 'Lyon'
         ]);
         User::create([
-            'email' => 'innovationsociale@anef.com',
+            'email' => 'innovationsociale@anesf.com',
             'name' => 'Mathilde Veille',
             'password' => Hash::make('Jesct2021'),
             'role' => 'ADMIN',

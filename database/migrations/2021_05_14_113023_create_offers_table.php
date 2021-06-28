@@ -21,7 +21,7 @@ class CreateOffersTable extends Migration
             $table->string('region');
             $table->string('ville');
             $table->string('image')->nullable();
-            $table->BigInteger('user_id')->unsigned();
+            $table->integer('user_id')->unsigned();
             $table->string('slug')->nullable();
             $table->timestamps();
 

@@ -30,7 +30,7 @@ use Mailjet\LaravelMailjet\Contracts\CampaignDraftContract;
 
 
 //index
-Route::get('/', [MainController::class, 'home'])->name('home');
+Route::get('/home', [MainController::class, 'home'])->name('home');
 
 
 

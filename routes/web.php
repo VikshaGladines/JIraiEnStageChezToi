@@ -69,7 +69,7 @@ Route::post('/home', [MainController::class, 'profilestore'])->middleware('auth'
 
 
 //comment
-Route::post('/offer/test/comment', [CommentController::class, 'store'])->middleware('auth')->name('comment.store');
+Route::post('/offer/comment', [CommentController::class, 'store'])->middleware('auth')->name('comment.store');
 
 Route::get('/testss', [CommentController::class, 'commentOffer'])->middleware('auth')->name('test');
 

@@ -167,7 +167,7 @@ $erreur = "cette adresse mail est déja prise";
 
                         <div class="d-flex justify-content-center mt-4">
                             <a class="" href="{{ route('login') }}">
-                                {{ __('Déja inscrit?') }}
+                                {{ __('Déjà inscrit.e?') }}
                             </a>
                         </div>
                         <div class="d-flex justify-content-center mt-4">

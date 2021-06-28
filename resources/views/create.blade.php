@@ -11,7 +11,7 @@
         <div class="col-3">
         </div>
         
-        <div class="col-6 d-flex justify-content-center"> 
+        <div class="col-xl-6 col-md-12 d-flex justify-content-center"> 
         
             <div class="card stylecard">  
                 <div class="card-body">

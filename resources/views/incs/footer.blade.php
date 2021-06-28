@@ -40,13 +40,14 @@
                 <div class="d-flex justify-content-center">
                     <p class="text-dark"> ©2021 Tous droits déposé ANESF</p>
                 </div>
-        </div>
-    
-        <div class="col-4">
-            <div class="d-flex justify-content-end pr-3" style="margin-top: 200px">
+                <div class="d-flex justify-content-center p-3" >
                 <a href="{{ route('mentions')}}">Mentions légales et confidentialité</a>&nbsp;&nbsp;&nbsp;
                
             </div>
+        </div>
+    
+        <div class="col-4">
+            
         </div>
    
 </div>

@@ -12,6 +12,15 @@
     <link href="{{ asset('css/style.css') }}" rel="stylesheet">
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <title>Document</title>
+    <style>
+.cartefrance {
+  position: relative; 
+  right: 15px; 
+  width: 750px; 
+  height: 648px;
+}
+
+        </style>
 </head>
 <body>
    @include('incs.navbar')

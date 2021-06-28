@@ -12,12 +12,10 @@
             <div class="card mb-5">
             <div class="card-body">
               <h3 class="card-title border-bottom pb-2"> <a href=" {{ route('offer', $offer->slug) }}"> {{ $offer->title }} </a> </h3> 
-              <span class="d-flex justify-content-end p-2" style="position: relative; right: 72px; bottom: 68px;"> <button class="btn btn-danger pb-2 pt-2 pr-3 pl-3"> <a class=" text-white" href="{{ route('offer.edit', $offer->id) }}"> Editer </a> </button></span> 
-              <button type="button" style="position: relative; left: 840px; bottom: 117px;" class="btn btn-primary p-2" onclick="document.getElementById('model-open').style.display='block'"> Supprimer </button>
-              <div class=""style="position: relative; bottom: 85px;">
-              <p class="d-flex justify-content-start"> {{ $offer->content }}</p>
-              </div>
+              <span class="d-inline-flex justify-content-end p-2 text-right"> <button class="btn btn-danger pb-2 pt-2 pr-3 pl-3"> <a class=" text-white" href="{{ route('offer.edit', $offer->id) }}"> Editer </a> </button></span> 
+              <span class="d-inline-flex justify-content-end p-2 text-right"><button type="button" class="btn btn-primary p-2" onclick="document.getElementById('model-open').style.display='block'"> Supprimer </button></span>
               <p class="d-flex justify-content-end">{{ $offer->created_at->format('d/m/Y') }} </p> 
+              <p class="d-flex justify-content-end">fait par : {{ $offer->User->name }} </p> 
               <form action={{ route('offer.delete', $offer->id) }} method="POST">
                   @csrf
                   @method("DELETE")

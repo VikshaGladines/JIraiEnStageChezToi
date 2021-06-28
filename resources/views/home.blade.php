@@ -3,35 +3,35 @@
 @section('content')
 <div class="container-fluid">
 <div class="row " >
-    <div class="col-2" style="background-image: url('image/JESCT trame.png'); background-repeat: repeat; height: 350px;">
+    <div class="col-2" style="background-image: url('image/JESCT trame.png'); background-repeat: repeat; height: 528px;">
     </div>
 
     <div class="col-8 d-flex justify-content-center pt-5">
         <div class=" " style="">
-            <p class="d-flex justify-content-xl-center texttaille mx-auto " style="width: 1150px; font-family: 'Luciole-Regular'; src: url('/public/fonts/vendor/bootstrap-sass/bootstrap/Luciole-Regular.ttf') format('ttf');"> Le projet "J'irai en stage chez toi" a pour objectif de permettre aux étudiant.e.s sages-femmes d'échanger des logements afin de rendre les lieux de stages plus accessibles et diversifiés.
+            <p class="d-flex justify-content-center texttaille p-3" style=" max-height: 500px;overflow: scroll; font-family: 'Luciole-Regular'; src: url('/public/fonts/vendor/bootstrap-sass/bootstrap/Luciole-Regular.ttf') format('ttf');"> Le projet "J'irai en stage chez toi" a pour objectif de permettre aux étudiant.e.s sages-femmes d'échanger des logements afin de rendre les lieux de stages plus accessibles et diversifiés.
             En effet, la formation en maïeutique demande de nombreux stages et les CHU de référence ne sont pas toujours aptes à accueillir tout.e.s les étudiant.e.s. De plus, ces stages à l’extérieur permettent de découvrir des pratiques et des protocoles différents de la formation de référence.
             Cependant, les revenus des étudiant.e.s étant limités et les périodes de stages relativement courtes, trouver un logement s’avère être parfois une tâche difficile.
             C’est pourquoi l’ANESF propose le projet “J’irai en stage chez toi”, reposant sur un principe d’entraide et de solidarité entre étudiant.e.s sages-femmes.</p> <br><br>
         </div>
     </div>
 
-    <div class="col-2" style="background-image: url('image/JESCT trame.png'); background-repeat: repeat; height: 350px;">
+    <div class="col-2" style="background-image: url('image/JESCT trame.png'); background-repeat: repeat; height: 528px;">
         </div>
     </div>
 </div>
 
 <div class="row">
-    <div class="col-sm-2" style="background-image: url('image/JESCT trame.png'); background-repeat: repeat;"> 
+    <div class="col-2" style="background-image: url('image/JESCT trame.png'); background-repeat: repeat;"> 
        
     </div>
 
     <div class="col-sm-8" > 
-        <div class="d-flex justify-content-xl-center p-3 border-bottom text-rose">
+        <div class="d-flex justify-content-center p-3 border-bottom text-rose">
             <h2> Recherche par région </h2>
         </div>
         <div class="d-flex justify-content-xl-center p-4 border-bottom">
            
-            <img style="position: relative; right: 15px; width: 750px; height: 648px;"src="{{ asset('image/Carte de France.png') }}" alt="La France et ses région" usemap='#reg'>
+            <img class="cartefrance" src="{{ asset('image/Carte de France.png') }}" alt="La France et ses région" usemap='#reg'>
             <map name='reg'>
                 <area target="" alt="Bretagne" title="" href="{{ url('test/Bretagne') }}" coords="107,224,119,229,126,230,134,223,144,218,155,213,161,213,171,208,173,196,175,184,174,172,167,173,158,167,143,158,135,161,122,161,115,162,108,165,101,160,91,145,85,143,75,145,64,151,50,152,41,152,30,152,23,157,22,162,20,168,31,185,31,192,34,197,34,203,83,225,103,229,110,230" shape="poly">
                 <area target="" alt="Normandie" title="" href="{{ url('test/Normandie') }}" coords="144,88,158,121,155,138,163,155,158,160,160,166,174,163,183,169,199,171,209,169,215,168,220,173,232,172,237,177,240,183,247,186,254,191,255,183,261,173,256,164,278,153,283,142,291,132,298,121,295,97,297,87,286,69,263,77,243,83,236,90,231,99,244,105,228,113,217,120,202,116,183,109,176,109,168,90" shape="poly">
@@ -56,20 +56,20 @@
         </div>
  
     </div>
-    <div class="col-sm-2" style="background-image: url('image/JESCT trame.png'); background-repeat: repeat;">
+    <div class="col-2" style="background-image: url('image/JESCT trame.png'); background-repeat: repeat;">
        
     </div>
 </div>
 
 <div class="row">
     <div class="col-12">
-    <p class="d-flex justify-content-xl-center p-5" style="background-color: #F2F2F2"><a href="{{ route ('file.download.index') }}" class="lead  border border-primary p-3">Télécharger la charte JESCT</a></p>
+    <p class="d-flex justify-content-center p-5" style="background-color: #F2F2F2"><a href="{{ route ('file.download.index') }}" class="lead  border border-primary p-3">Télécharger la charte JESCT</a></p>
     </div>
 </div>
 
 <div class="row">
     <div class="col-12">
-            <h3 class="d-flex justify-content-xl-center p-4 border-bottom "> <u> Dernière Annonces  </u></h3>
+            <h3 class="d-flex justify-content-center p-4 border-bottom "> <u> Dernière Annonces  </u></h3>
     </div>
 </div>    
 <div class="row m-3">
@@ -80,9 +80,9 @@
 <div class="row p-4 text-center displaynone" id="offerID" style="display: none;">
     <div class="col-12">
         @foreach ($lastoffer as $offers)
-        <div class="border border-primary d-inline-flex justify-content-around w-25 text-center">         
-            <span class=" d-flex p-3 justify-content-xl-center"><a href=" {{ route('offer', $offers->slug) }}"> {{ $offers->title }} </a></span> 
-            <span class=" d-flex p-3 justify-content-xl-center"> Créer le : {{ $offers->created_at->format('d/m/Y') }} par : {{ $offers->User->name }} </span>
+        <div class="border border-primary d-inline-flex justify-content-around w-50 text-center mb-2">         
+            <span class=" d-flex p-3 justify-content-center"><a href=" {{ route('offer', $offers->slug) }}"> {{ $offers->title }} </a></span> 
+            <span class=" d-flex p-3 justify-content-center"> Créer le : {{ $offers->created_at->format('d/m/Y') }} par : {{ $offers->User->name }} </span>
         </div>
         @endforeach
     </div>

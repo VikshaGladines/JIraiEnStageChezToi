@@ -6,14 +6,14 @@
     <div class="col-3">
       
     </div>  
-    <div class="col-6">
+    <div class="col-xl-6 col-sm-12">
       <h1 class="pt-3 " style="text-align: center"> Votre profil </h1>
      
       <div class="card d-flex justify-content-center mt-5 "> 
             <div class="card-body p-5 "> 
               <div class="row" >
               <div class="col-6">
-                <div class="col-6">
+                <div class="col-xl-6 col-md-12">
                   
                     <h2 class="card-title border border-primary d-flex justify-content-center p-1" style="position: relative; left: 0px;">  {{ Auth::user()->name }}</h2>
                   
@@ -30,7 +30,7 @@
                     </form>
                 </div>
             
-          <div class="col-6">  
+          <div class="col-xl-6 col-md-12">  
             <div class="d-flex justify-content-center p-2 border-bottom">
               <h3 class="card-title"> Information personnelle </h3>
             </div><br>
@@ -56,7 +56,7 @@
     <div class="row">
         <div class="col-3">
         </div>
-          <div class="col-6">  
+          <div class="col-xl-6 col-md-12">  
             <h2 class="d-flex justify-content-center p-2"> Description personelle </h2>
             <div class="card"> 
              
@@ -74,16 +74,16 @@
       <div class="row">
         <div class="col-3">
         </div>
-        <div class="col-6">
+        <div class="col-xl-6 col-md-12">
             <h2 class="p-3"style="text-align: center"> Vos Offres </h2>
            
                 @foreach ($offer as $offers) 
                 <div class="card mb-5">
                 <div class="card-body">
                   <h3 class="card-title border-bottom pb-2"> <a href=" {{ route('offer', $offers->slug) }}"> {{ $offers->title }} </a> </h3> 
-                  <span class="d-flex justify-content-end p-2" style="position: relative; right: 72px; bottom: 68px;"> <button class="btn btn-danger pb-2 pt-2 pr-3 pl-3"> <a class=" text-white" href="{{ route('offer.edit', $offers->id) }}"> Editer </a> </button></span> 
-                  <button type="button" style="position: relative; left: 840px; bottom: 117px;" class="btn btn-primary p-2" onclick="document.getElementById('model-open').style.display='block'"> Supprimer </button>
-                  <p class="d-flex justify-content-end">{{ $offers->created_at->format('d/m/Y') }} </p> 
+                  <span class="d-inline-flex justify-content-end p-2 text-right"> <button class="btn btn-danger pb-2 pt-2 pr-3 pl-3"> <a class=" text-white" href="{{ route('offer.edit', $offers->id) }}"> Editer </a> </button></span> 
+                  <span class="d-inline-flex justify-content-end p-2 text-right"> <button type="button" class="btn btn-primary p-2" onclick="document.getElementById('model-open').style.display='block'"> Supprimer </button> </span>
+                  <p class="d-flex justify-content-end ">{{ $offers->created_at->format('d/m/Y') }} </p> 
                   <form action={{ route('offer.delete', $offers->id) }} method="POST">
                       @csrf
                       @method("DELETE")

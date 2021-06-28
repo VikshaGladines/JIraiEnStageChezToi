@@ -196,7 +196,10 @@ html, body {
   display: grid;
   place-items: center;
 }
-
+.testte {
+  width: 10px;
+  height: 10px;
+}
 .bg-Arouge {
   background-color: #DD3E42 !important;
 }
@@ -219,4 +222,17 @@ html, body {
 
 .text-Avert {
   color:  #54B156 !important;
+}
+
+.bgimage {
+  background-image: url("image/JESCT trame.png"); 
+  background-repeat: repeat; 
+  height: 350px;
+}
+
+.cartefrance {
+  position: relative; 
+  right: 15px; 
+  width: 750px; 
+  height: 648px;
 }

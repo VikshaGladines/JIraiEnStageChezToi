@@ -8,7 +8,7 @@
     {{--<p style="text-align: center"> <a href=" {{route('home') }}" >revenir en arrière </a></p>--}}
     <div class="col-3">
     </div>
-    <div class="col-6">
+    <div class="col-xl-6 col-md-12">
       <div class="card d-flex justify-content-xl-center mt-5 mb-5 styleoffers">  
         <div class="card-body">
           <div class="border-bottom">

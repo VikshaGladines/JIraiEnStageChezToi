@@ -189,9 +189,7 @@ class MainController extends Controller
         return view('legal.MentionLégale');
 
     }
-   public function test() {
-       'test';
-   }
+
 }
 
 

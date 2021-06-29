@@ -16,7 +16,7 @@
 
       Vous avez reçu un commentaire ou un message de "J'irai en stage chez toi"<br>
 
-      lien : 
+      lien : https://jiraienstagecheztoi.fr/home
             </div>
         </div>
     </div>

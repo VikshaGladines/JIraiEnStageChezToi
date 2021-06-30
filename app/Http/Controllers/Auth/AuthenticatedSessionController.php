@@ -32,10 +32,10 @@ class AuthenticatedSessionController extends Controller
 
         $request->session()->regenerate();
             if (Auth::user()->role === 'ADMIN') {
-            return redirect()->intended('/home');
+            return redirect()->intended('/');
         }
         else {
-            return redirect()->intended('/home');
+            return redirect()->intended('/');
         }
     }
 
@@ -53,6 +53,6 @@ class AuthenticatedSessionController extends Controller
 
         $request->session()->regenerateToken();
 
-        return redirect('/home');
+        return redirect('/');
     }
 }

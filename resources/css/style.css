@@ -5,10 +5,6 @@
   font-family: "Luciole-Regular";
   src: url('/public/fonts/vendor/bootstrap-sass/bootstrap/Luciole-Regular.ttf') format('ttf');
   }
-html {
-  font-family: "Luciole-Regular";
-  src: url('/public/fonts/vendor/bootstrap-sass/bootstrap/Luciole-Regular.ttf') format('ttf');
-}
 
   .container-fluid {
     margin-right: auto;

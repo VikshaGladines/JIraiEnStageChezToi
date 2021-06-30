@@ -39,7 +39,7 @@ Route::get('/home/test', [MainController::class, 'profile'])->name('navbar');
 
 
 //legal
-Route::get('/home/mentions légales', [MainController::class, 'mention'])->name('mentions');
+Route::get('/home/mentions-legales', [MainController::class, 'mention'])->name('mentions');
 
 //offer
 Route::get('/test/{region}', [OfferRegionController::class, 'index'])->name('offre.region');

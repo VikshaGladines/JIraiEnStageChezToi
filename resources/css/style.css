@@ -71,8 +71,7 @@
  
 }
 .texttaille {
-  font-family: "No";
-  src: url('Luciole-Regular.ttf') format('ttf');
+  
   font-size: 20px;
 }
 .dropcolor {
@@ -139,9 +138,6 @@
   margin-top: 20px;
   width: 320px;
 }
-.bar {
-  
-}
 
 .iconetaille2 {
   position: relative;
@@ -174,9 +170,6 @@ html, body {
     padding: 0;
   }
 
-.footers {
-  
-}
 .logo {
   max-height: 116px;
   max-width: 196px;
@@ -212,12 +205,6 @@ html, body {
 
 .text-Avert {
   color:  #54B156 !important;
-}
-
-.bgimage {
-  background-image: url("image/JESCT trame.png"); 
-  background-repeat: repeat; 
-  height: 350px;
 }
 
 .cartefrance {
